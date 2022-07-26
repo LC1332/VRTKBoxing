@@ -23,6 +23,7 @@ public class SpawnBombs : MonoBehaviour
             ball.transform.position = cameraRig.transform.position + new Vector3( radius * Mathf.Sin(angle), 
                 Random.Range(1.25f, 1.75f), 
                 radius * Mathf.Cos(angle) );
+            Destroy(ball, 20f);
             yield return new WaitForSeconds(Random.Range(1f,3f));
         }
     }
